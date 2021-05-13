@@ -1,0 +1,11 @@
+<a href="http://www.yahoo.co.jp/" id="mylink">Yahoo</a>
+<a href="http://www.google.co.jp/">Google</a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+var url = $("#mylink").attr("href");
+// これで、urlには "http://www.yahoo.co.jp/" と格納されます。
+var url = $("a").attr("href");
+// こちらも同上
+</script>

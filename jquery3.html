@@ -1,0 +1,42 @@
+<style>.product{width: 50px;}
+[type="radio"]{vertical-align: top;}</style>
+
+<select id="print">
+  <option value="0" data-max="6" data-ex="png">おみくじ
+  <option value="7" data-max="14" data-ex="jpg">花札
+  <option value="15"  data-max="23" data-ex="jpg">麻雀牌
+  </option>
+</select>
+
+<br>
+<div id="img_wrap">
+  <!-- ここに画像が埋め込まれる -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+$('#print').change(function(){
+  prt();
+});
+
+prt();
+
+function prt(){
+  var elem = '';
+  var num = $('#print').val();
+  var exp = $('#print').children('option:selected').data('ex');
+  var max = $('#print').children('option:selected').data('max');
+
+  for(let i=num; i<max; i++){
+    elem +=`<label>
+    <input type="radio" name="gazou" value="${i}">
+    <img class="product" src="gazou/${i}.${exp}">
+    </label>`;
+  }
+  $('#img_wrap').html(elem);
+  console.log(elem);
+};
+</script>
+
+

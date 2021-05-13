@@ -1,0 +1,38 @@
+<head>
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="Magnific-Popup/dist/magnific-popup.css">
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="Magnific-Popup/Website/third-party-libs/jquery.min.js"></script>
+<!-- Magnific Popup core JS file -->
+<script src="Magnific-Popup/dist/jquery.magnific-popup.js"></script>
+</head>
+
+
+<body>
+  <div class="parent-container">
+    <a href="img/55923.jpg">Open popup 1</a>
+    <a href="img/518714.jpg">Open popup 2</a>
+    <a href="img/726295.jpg">Open popup 3</a>
+  </div>
+  <button id="some-button">なにかのボタン</button>
+  <script>
+ $('.parent-container').magnificPopup({
+  delegate: 'a',
+  type: 'image'
+  });
+  $('#some-button').magnificPopup({
+    items:[
+      {
+      src:'http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg'
+      },
+      {
+        src: 'https://www.youtube.com/watch?v=VgzTfdzj_Ho'
+      },
+      {
+        type: 'iframe' // this overrides default type
+      }
+    ]
+
+  });
+  </script>
+</body>

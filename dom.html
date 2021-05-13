@@ -1,0 +1,28 @@
+<style> 
+	/*セレクタをおぼえましょう*/
+	#abc{color:#f00;}
+	.efg{border: 1px solid }
+	.efg em{font-size: 1.5em}
+  input.efg{background-color: #ccc;}
+</style>
+
+<p id="abc">こんにちは</p>
+<p class="efg"><em>123</em>456</p>
+<input type="radio" name="xyz">
+<input class="efg" type="text" name="tre">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	//生のjsでは
+	var h = '<em>Hello</em>';
+	document.getElementById('abc').innerHTML=h ;
+ 
+ //jQueryを使って書いた場合
+	$('#abc').html(h);//  ← 与える
+	var efg = $('.efg em').html();;//	 ← 取得する
+	
+	});
+</script>
+
